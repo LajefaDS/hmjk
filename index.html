@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HMJK STIAMI - Himpunan Mahasiswa Manajemen Komunikasi</title>
-  <link rel="icon" href="images.jpeg" type="image/jpeg">
+  <link rel="icon" href="images.jpeg" type="image.jpeg">
   
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
     :root {
@@ -27,17 +24,14 @@
       color: #333;
       scroll-behavior: smooth;
     }
-
-    html {
-  scroll-behavior: smooth;
-}
     
     .navbar-brand img {
-      height: 40px;
-      width: auto;
-      border-radius: 50%;
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
     }
 
+    /* Navbar */
     .navbar {
       background-color: var(--biru-tua) !important;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -58,6 +52,7 @@
       color: #00b4d8 !important;
     }
 
+    /* Hero */
     .hero {
       background: linear-gradient(var(--transparan-biru), var(--transparan-biru)),
                   url('https://i.ytimg.com/vi/yAdxeEEpRI0/maxresdefault.jpg') center/cover;
@@ -89,6 +84,7 @@
       color: var(--putih);
     }
 
+    /* Section */
     .section-padding {
       padding: 80px 0;
     }
@@ -133,6 +129,7 @@
       font-size: 0.95rem;
     }
 
+    /* Responsif */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -146,16 +143,16 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home" data-aos="fade-down">
+      <a class="navbar-brand" href="#home">
         <img src="images.jpeg" alt="Logo HMJK">
         HMJK STIAMI
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav" data-aos="fade-left">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
           <li class="nav-item"><a class="nav-link" href="#divisi">Divisi</a></li>
@@ -169,7 +166,7 @@
 
   <!-- Hero -->
   <section id="home" class="hero text-center">
-    <div class="container" data-aos="zoom-in">
+    <div class="container">
       <h1>Selamat Datang di Himpunan Mahasiswa Manajemen Komunikasi</h1>
       <p>Institut STIAMI - Membangun Generasi Komunikator Unggul</p>
       <a href="#profil" class="btn btn-custom mt-3">Pelajari Lebih Lanjut</a>
@@ -178,10 +175,10 @@
 
   <!-- Profil -->
   <section id="profil" class="section-padding bg-light-gray">
-    <div class="container text-center" data-aos="fade-up">
+    <div class="container text-center">
       <h2>Profil Organisasi</h2>
       <div class="row">
-        <div class="col-md-4 mb-4" data-aos="fade-right">
+        <div class="col-md-4 mb-4">
           <div class="card h-100">
             <img src="https://via.placeholder.com/300x200?text=Sejarah" class="card-img-top">
             <div class="card-body">
@@ -190,17 +187,16 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="col-md-4 mb-4">
           <div class="card h-100">
             <img src="https://via.placeholder.com/300x200?text=Visi+Misi" class="card-img-top">
             <div class="card-body">
               <h5>Visi & Misi</h5>
-              <p><strong>Visi:</strong> Menjadi himpunan mahasiswa komunikasi unggul nasional.<br>
-                <strong>Misi:</strong> Meningkatkan kompetensi, mengabdi ke masyarakat, dan berkolaborasi dengan industri.</p>
+              <p><strong>Visi:</strong> Menjadi himpunan mahasiswa komunikasi unggul nasional.<br><strong>Misi:</strong> Meningkatkan kompetensi, mengabdi ke masyarakat, dan berkolaborasi dengan industri.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4" data-aos="fade-left">
+        <div class="col-md-4 mb-4">
           <div class="card h-100">
             <img src="https://via.placeholder.com/300x200?text=Struktur" class="card-img-top">
             <div class="card-body">
@@ -213,21 +209,12 @@
     </div>
   </section>
 
-  <!-- Divisi -->
+  <!-- Divisi (dipindah ke atas kegiatan) -->
   <section id="divisi" class="section-padding bg-light-gray">
-    <div class="container text-center" data-aos="fade-up">
+    <div class="container text-center">
       <h2>Divisi dan Jabatan</h2>
       <div class="row">
-        <div class="col-md-4 mb-4" data-aos="fade-up-right">
-          <div class="card">
-            <img src="https://via.placeholder.com/300x200?text=Sekretaris" class="card-img-top">
-            <div class="card-body">
-              <h5>Sekretaris</h5>
-              <p>Mengelola administrasi dan dokumentasi kegiatan organisasi.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Ketua" class="card-img-top">
             <div class="card-body">
@@ -236,7 +223,16 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up-left">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Sekretaris" class="card-img-top">
+            <div class="card-body">
+              <h5>Sekretaris</h5>
+              <p>Mengelola administrasi dan dokumentasi kegiatan organisasi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Bendahara" class="card-img-top">
             <div class="card-body">
@@ -251,10 +247,10 @@
 
   <!-- Kegiatan -->
   <section id="kegiatan" class="section-padding">
-    <div class="container text-center" data-aos="fade-up">
+    <div class="container text-center">
       <h2>Kegiatan dan Program</h2>
       <div class="row">
-        <div class="col-md-4 mb-4" data-aos="flip-left">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Seminar" class="card-img-top">
             <div class="card-body">
@@ -263,7 +259,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4" data-aos="flip-up">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Pengabdian" class="card-img-top">
             <div class="card-body">
@@ -272,7 +268,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4" data-aos="flip-right">
+        <div class="col-md-4 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Kompetisi" class="card-img-top">
             <div class="card-body">
@@ -287,24 +283,24 @@
 
   <!-- Berita -->
   <section id="berita" class="section-padding">
-    <div class="container text-center" data-aos="fade-up">
+    <div class="container text-center">
       <h2>Berita dan Artikel</h2>
       <div class="row">
-        <div class="col-md-6 mb-4" data-aos="fade-right">
+        <div class="col-md-6 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Berita" class="card-img-top">
             <div class="card-body">
-              <h5>Seminar Digital Communication</h5>
+              <h5>Seminar Digital Communication Berhasil Digelar</h5>
               <p>Acara HMJK yang dihadiri 200 peserta membahas strategi komunikasi digital masa kini.</p>
               <a href="#" class="btn btn-custom">Baca Selengkapnya</a>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4" data-aos="fade-left">
+        <div class="col-md-6 mb-4">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Artikel" class="card-img-top">
             <div class="card-body">
-              <h5>Pentingnya Manajemen Krisis</h5>
+              <h5>Pentingnya Manajemen Krisis Komunikasi</h5>
               <p>Artikel tentang cara organisasi menghadapi krisis dengan komunikasi efektif.</p>
               <a href="#" class="btn btn-custom">Baca Selengkapnya</a>
             </div>
@@ -314,19 +310,32 @@
     </div>
   </section>
 
-  <!-- Kontak -->
+<!-- Kontak -->
   <section id="kontak" class="section-padding bg-light-gray">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
       <h2 class="text-center">Kontak & Informasi</h2>
       <div class="row mt-4">
-        <div class="col-md-6" data-aos="fade-right">
+        <div class="col-md-6">
           <h5><i class="bi bi-geo-alt-fill text-primary"></i> Alamat</h5>
           <p>Institut STIAMI, Jl. Pangkalan Asem No.55, RT.5/RW.7, Galur, Kota Jakarta Pusat</p>
-          <p><i class="bi bi-telephone"></i> <a style="text-decoration: none; color: black;" href="tel:+62214213380">(021) 4213380</a></p>
-          <p><i class="bi bi-globe"></i> <a style="text-decoration: none; color: black;" href="https://stiami.ac.id" target="_blank">stiami.ac.id</a></p>
-          <p><i class="bi bi-instagram"></i> <a style="text-decoration: none; color: black;" href="https://www.instagram.com/hmj_komunikasi" target="_blank">@hmj_komunikasi</a></p>
+
+          <p>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+62214213380" class="text-decoration-none text-dark">(021) 4213380</a>
+          </p>
+
+          <p>
+            <i class="bi bi-globe"></i>
+            <a href="https://stiami.ac.id" target="_blank" class="text-decoration-none text-dark">stiami.ac.id</a>
+          </p>
+
+          <p>
+            <i class="bi bi-instagram"></i>
+            <a href="https://www.instagram.com/hmj_komunikasi" target="_blank" class="text-decoration-none text-dark">@hmj_komunikasi</a>
+          </p>
         </div>
-        <div class="col-md-6" data-aos="fade-left">
+
+        <div class="col-md-6">
           <h5><i class="bi bi-person-plus-fill text-success"></i> Cara Bergabung</h5>
           <p>Daftar secara online atau ke sekretariat HMJK. Terbuka untuk semua mahasiswa jurusan Manajemen Komunikasi.</p>
           <a href="#" class="btn btn-custom">Daftar Sekarang</a>
@@ -344,15 +353,5 @@
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: 'ease-in-out'
-    });
-  </script>
 </body>
 </html>
