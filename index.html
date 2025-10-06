@@ -54,11 +54,20 @@
 
     /* Hero */
     .hero {
-      background: linear-gradient(var(--transparan-biru), var(--transparan-biru)),
-                  url('https://i.ytimg.com/vi/yAdxeEEpRI0/maxresdefault.jpg') center/cover;
-      color: var(--putih);
-      padding: 100px 0;
-    }
+  position: relative;
+  background: linear-gradient(var(--transparan-biru), var(--transparan-biru)),
+              url('https://i.ytimg.com/vi/yAdxeEEpRI0/maxresdefault.jpg') no-repeat center center;
+  background-size: cover; /* pastikan gambar menutupi layar */
+  background-position: center center; /* posisi gambar tetap di tengah */
+  background-attachment: fixed; /* efek parallax (opsional) */
+  width: 100%;
+  height: 100vh; /* penuh 1 layar */
+  color: var(--putih);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
     .hero h1 {
       font-size: 2.8rem;
@@ -165,13 +174,13 @@
   </nav>
 
   <!-- Hero -->
-  <section id="home" class="hero text-center">
-    <div class="container">
-      <h1>Selamat Datang di Himpunan Mahasiswa Manajemen Komunikasi</h1>
-      <p>Institut STIAMI - Membangun Generasi Komunikator Unggul</p>
-      <a href="#profil" class="btn btn-custom mt-3">Pelajari Lebih Lanjut</a>
-    </div>
-  </section>
+  <section id="home" class="hero">
+  <div class="container">
+    <h1>Selamat Datang di Himpunan Mahasiswa Manajemen Komunikasi</h1>
+    <p>Institut STIAMI - Membangun Generasi Komunikator Unggul</p>
+    <a href="#profil" class="btn btn-custom mt-3">Pelajari Lebih Lanjut</a>
+  </div>
+</section>
 
   <!-- Profil -->
   <section id="profil" class="section-padding bg-light-gray">
