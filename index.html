@@ -27,6 +27,10 @@
       color: #333;
       scroll-behavior: smooth;
     }
+
+    html {
+  scroll-behavior: smooth;
+}
     
     .navbar-brand img {
       height: 40px;
@@ -332,7 +336,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center" data-aos="fade-up">
+  <footer class="text-center">
     <div class="container">
       <p>&copy; 2025 Himpunan Mahasiswa Manajemen Komunikasi - Institut STIAMI</p>
     </div>
@@ -345,7 +349,9 @@
   <script>
     AOS.init({
       duration: 1000,
-      once: true
+      once: false,
+      mirror: true,
+      easing: 'ease-in-out'
     });
   </script>
 </body>
