@@ -69,6 +69,43 @@
   text-align: center;
 }
 
+/* Tombol ke atas */
+#btnScrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: var(--biru-tua);
+  color: var(--putih);
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#btnScrollTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#btnScrollTop:hover {
+  background-color: #00b4d8;
+  transform: translateY(-5px);
+}
+/* batas */
+
     .hero h1 {
       font-size: 2.8rem;
       font-weight: 700;
@@ -186,8 +223,8 @@
   <section id="profil" class="section-padding bg-light-gray">
     <div class="container text-center">
       <h2 data-aos="zoom-in">Profil Organisasi</h2>
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-4 mb-4">
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card h-100">
             <img src="https://via.placeholder.com/300x200?text=Sejarah" class="card-img-top">
             <div class="card-body">
@@ -196,7 +233,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card h-100">
             <img src="https://via.placeholder.com/300x200?text=Visi+Misi" class="card-img-top">
             <div class="card-body">
@@ -205,7 +242,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card h-100">
             <img src="https://via.placeholder.com/300x200?text=Struktur" class="card-img-top">
             <div class="card-body">
@@ -222,8 +259,8 @@
   <section id="divisi" class="section-padding bg-light-gray">
     <div class="container text-center">
       <h2 data-aos="zoom-in">Divisi dan Jabatan</h2>
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-4 mb-4">
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Ketua" class="card-img-top">
             <div class="card-body">
@@ -232,7 +269,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Sekretaris" class="card-img-top">
             <div class="card-body">
@@ -241,7 +278,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Bendahara" class="card-img-top">
             <div class="card-body">
@@ -258,8 +295,8 @@
   <section id="kegiatan" class="section-padding">
     <div class="container text-center">
       <h2 data-aos="zoom-in">Kegiatan dan Program</h2>
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-4 mb-4">
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Seminar" class="card-img-top">
             <div class="card-body">
@@ -268,7 +305,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Pengabdian" class="card-img-top">
             <div class="card-body">
@@ -277,7 +314,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Kompetisi" class="card-img-top">
             <div class="card-body">
@@ -294,8 +331,8 @@
   <section id="berita" class="section-padding">
     <div class="container text-center">
       <h2 data-aos="zoom-in">Berita dan Artikel</h2>
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-6 mb-4">
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Berita" class="card-img-top">
             <div class="card-body">
@@ -305,7 +342,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4" data-aos="fade-up">
           <div class="card">
             <img src="https://via.placeholder.com/300x200?text=Artikel" class="card-img-top">
             <div class="card-body">
@@ -360,11 +397,38 @@
     </div>
   </footer>
 
+  <!-- Tombol Scroll ke Atas -->
+<button id="btnScrollTop" title="Kembali ke atas">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS PUNYA AOS KE 1 -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- JS PUNYA AOS KE 2 -->
   <script>
   AOS.init();
+  // Tombol Scroll ke Atas
+const btnScrollTop = document.getElementById("btnScrollTop");
+
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btnScrollTop.classList.add("show");
+  } else {
+    btnScrollTop.classList.remove("show");
+  }
+});
+
+btnScrollTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+/* Tombol Scroll ke Atas */
 </script>
 </body>
 </html>
