@@ -156,9 +156,10 @@
     }
 
     .card img {
-      object-fit: cover;
       width: 100%;
-      height: 380px;
+      height: 300px;
+      border-radius: 12px 12px 0 0;
+      object-fit: cover;
     }
 
     footer {
@@ -185,6 +186,58 @@
 
     .card-body p {
       font-size: 0.9rem;
+    }
+
+    .scroll-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 40px;
+      cursor: grab;
+    }
+
+    .scroll-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll-left 40s linear infinite;
+    }
+
+    .scroll-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .kartu {
+      background: #1b1b1b;
+      border-radius: 12px;
+      color: white;
+      width: 280px;
+      flex-shrink: 0;
+      padding-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .kartu:hover {
+      transform: scale(1.05);
+    }
+
+    .card h6 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      padding: 0 10px;
     }
 
     /* Terapkan gradasi mulai dari profil organisasi sampai kontak & informasi */
@@ -242,6 +295,10 @@
 
       .card img {
         height: 300px;
+      }
+
+      .kartu {
+        width: 240px;
       }
     }
 
@@ -452,225 +509,162 @@
   </section>
 
   <!-- Kegiatan -->
-  <section id="kegiatan" class="section-padding">
-    <div class="container text-center">
+  <section id="kegiatan" class="section-padding text-center bg-dark text-light py-5">
+    <div class="container">
       <h2 data-aos="zoom-in" class="fw-bold mb-3">Kegiatan dan Program</h2>
       <p class="text-light mb-5" data-aos="fade-up">Our Program</p>
 
-      <!-- ================== DIVISI MULTIMEDIA ================== -->
-      <h4 class="fw-bold mb-4" data-aos="fade-right">Divisi Multimedia</h4>
-      <div id="carouselMultimedia" class="carousel slide mb-5" data-bs-ride="carousel" data-aos="zoom-in">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-md-4">
-                <div class="card shadow-sm">
-                  <img src="kedua.jpg" class="card-img-top" alt="Desain Grafis">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Desain Grafis</h6>
-                    <p>Membuat desain publikasi kegiatan HMJK menggunakan software grafis profesional.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Videografi" class="card-img-top" alt="Videografi">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Videografi</h6>
-                    <p>Mengabadikan momen kegiatan melalui dokumentasi video yang kreatif dan menarik.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Fotografi" class="card-img-top" alt="Fotografi">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Fotografi</h6>
-                    <p>Mengambil gambar kegiatan untuk keperluan publikasi dan dokumentasi HMJK.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- ========= DIVISI MULTIMEDIA ========= -->
+      <h4 class="fw-bold mb-4 mt-2 text-warning" data-aos="fade-right">Divisi Multimedia</h4>
+      <div class="scroll-wrapper" data-aos="zoom-in">
+        <div class="scroll-track">
+          <!-- konten asli -->
+          <div class="card kartu"><img src="kedua.jpg" alt="Desain Grafis">
+            <h6>Desain Grafis</h6>
+            <p>Membuat desain publikasi kegiatan HMJK menggunakan software grafis profesional.</p>
           </div>
-          <div class="carousel-item">
-            <div class="row justify-content-center">
-              <div class="col-md-4">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Editing+Video" class="card-img-top"
-                    alt="Editing Video">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Editing Video</h6>
-                    <p>Mengolah hasil dokumentasi menjadi video yang siap tayang di media sosial HMJK.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Social+Media" class="card-img-top"
-                    alt="Social Media">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Social Media</h6>
-                    <p>Mengelola konten visual di platform seperti Instagram, TikTok, dan YouTube HMJK.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Podcast" class="card-img-top" alt="Podcast">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Podcast</h6>
-                    <p>Program podcast membahas isu komunikasi dan kegiatan mahasiswa secara ringan.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Videografi" alt="Videografi">
+            <h6>Videografi</h6>
+            <p>Mengabadikan momen kegiatan melalui dokumentasi video yang kreatif dan menarik.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Fotografi" alt="Fotografi">
+            <h6>Fotografi</h6>
+            <p>Mengambil gambar kegiatan untuk keperluan publikasi dan dokumentasi HMJK.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Editing+Video" alt="Editing Video">
+            <h6>Editing Video</h6>
+            <p>Mengolah hasil dokumentasi menjadi video yang siap tayang di media sosial HMJK.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Social+Media" alt="Social Media">
+            <h6>Social Media</h6>
+            <p>Mengelola konten visual di platform seperti Instagram, TikTok, dan YouTube HMJK.</p>
+          </div>
+
+          <!-- duplikasi -->
+          <div class="card kartu"><img src="kedua.jpg" alt="Desain Grafis">
+            <h6>Desain Grafis</h6>
+            <p>Membuat desain publikasi kegiatan HMJK menggunakan software grafis profesional.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Videografi" alt="Videografi">
+            <h6>Videografi</h6>
+            <p>Mengabadikan momen kegiatan melalui dokumentasi video yang kreatif dan menarik.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Fotografi" alt="Fotografi">
+            <h6>Fotografi</h6>
+            <p>Mengambil gambar kegiatan untuk keperluan publikasi dan dokumentasi HMJK.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Editing+Video" alt="Editing Video">
+            <h6>Editing Video</h6>
+            <p>Mengolah hasil dokumentasi menjadi video yang siap tayang di media sosial HMJK.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Social+Media" alt="Social Media">
+            <h6>Social Media</h6>
+            <p>Mengelola konten visual di platform seperti Instagram, TikTok, dan YouTube HMJK.</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMultimedia" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselMultimedia" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-        </button>
       </div>
 
-      <!-- ================== DIVISI HUMAS ================== -->
-      <h4 class="fw-bold mb-4" data-aos="fade-right">Divisi Humas</h4>
-      <div id="carouselHumas" class="carousel slide mb-5" data-bs-ride="carousel" data-aos="zoom-in">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-md-4">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Relasi+Mitra" class="card-img-top"
-                    alt="Relasi Mitra">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Relasi Mitra</h6>
-                    <p>Menjalin hubungan dengan organisasi lain untuk memperluas jejaring HMJK.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Media+Partner" class="card-img-top"
-                    alt="Media Partner">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Media Partner</h6>
-                    <p>Menjalin kerja sama publikasi kegiatan dengan berbagai media partner kampus.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Kunjungan+Eksternal" class="card-img-top"
-                    alt="Kunjungan Eksternal">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Kunjungan Eksternal</h6>
-                    <p>Melaksanakan kunjungan ke lembaga atau instansi untuk memperkuat jaringan komunikasi.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- ========= DIVISI HUMAS ========= -->
+      <h4 class="fw-bold mb-4 mt-5 text-warning" data-aos="fade-right">Divisi Humas</h4>
+      <div class="scroll-wrapper" data-aos="zoom-in">
+        <div class="scroll-track">
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Relasi+Mitra" alt="Relasi Mitra">
+            <h6>Relasi Mitra</h6>
+            <p>Menjalin hubungan dengan organisasi lain untuk memperluas jejaring HMJK.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Media+Partner" alt="Media Partner">
+            <h6>Media Partner</h6>
+            <p>Menjalin kerja sama publikasi kegiatan dengan berbagai media partner kampus.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Kunjungan+Eksternal"
+              alt="Kunjungan Eksternal">
+            <h6>Kunjungan Eksternal</h6>
+            <p>Melaksanakan kunjungan ke lembaga atau instansi untuk memperkuat jaringan komunikasi.</p>
+          </div>
+
+          <!-- duplikasi -->
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Relasi+Mitra" alt="Relasi Mitra">
+            <h6>Relasi Mitra</h6>
+            <p>Menjalin hubungan dengan organisasi lain untuk memperluas jejaring HMJK.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Media+Partner" alt="Media Partner">
+            <h6>Media Partner</h6>
+            <p>Menjalin kerja sama publikasi kegiatan dengan berbagai media partner kampus.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Kunjungan+Eksternal"
+              alt="Kunjungan Eksternal">
+            <h6>Kunjungan Eksternal</h6>
+            <p>Melaksanakan kunjungan ke lembaga atau instansi untuk memperkuat jaringan komunikasi.</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHumas" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselHumas" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-        </button>
       </div>
 
-      <!-- ================== DIVISI EVENT ================== -->
-      <h4 class="fw-bold mb-4" data-aos="fade-right">Divisi Event</h4>
-      <div id="carouselEvent" class="carousel slide mb-5" data-bs-ride="carousel" data-aos="zoom-in">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-md-4">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Seminar" class="card-img-top" alt="Seminar">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Seminar</h6>
-                    <p>Menyelenggarakan seminar komunikasi dan pengembangan diri bagi mahasiswa.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Workshop" class="card-img-top" alt="Workshop">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Workshop</h6>
-                    <p>Membekali mahasiswa dengan keterampilan praktis melalui kegiatan pelatihan.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Event+Kampus" class="card-img-top"
-                    alt="Event Kampus">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Event Kampus</h6>
-                    <p>Mengorganisir kegiatan internal seperti lomba, pameran, dan malam keakraban.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- ========= DIVISI EVENT ========= -->
+      <h4 class="fw-bold mb-4 mt-5 text-warning" data-aos="fade-right">Divisi Event</h4>
+      <div class="scroll-wrapper" data-aos="zoom-in">
+        <div class="scroll-track">
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Seminar" alt="Seminar">
+            <h6>Seminar</h6>
+            <p>Menyelenggarakan seminar komunikasi dan pengembangan diri bagi mahasiswa.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Workshop" alt="Workshop">
+            <h6>Workshop</h6>
+            <p>Membekali mahasiswa dengan keterampilan praktis melalui kegiatan pelatihan.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Event+Kampus" alt="Event Kampus">
+            <h6>Event Kampus</h6>
+            <p>Mengorganisir kegiatan internal seperti lomba, pameran, dan malam keakraban.</p>
+          </div>
+
+          <!-- duplikasi -->
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Seminar" alt="Seminar">
+            <h6>Seminar</h6>
+            <p>Menyelenggarakan seminar komunikasi dan pengembangan diri bagi mahasiswa.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Workshop" alt="Workshop">
+            <h6>Workshop</h6>
+            <p>Membekali mahasiswa dengan keterampilan praktis melalui kegiatan pelatihan.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Event+Kampus" alt="Event Kampus">
+            <h6>Event Kampus</h6>
+            <p>Mengorganisir kegiatan internal seperti lomba, pameran, dan malam keakraban.</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvent" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselEvent" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-        </button>
       </div>
 
-      <!-- ================== DIVISI PUBLIKASI ================== -->
-      <h4 class="fw-bold mb-4" data-aos="fade-right">Divisi Publikasi</h4>
-      <div id="carouselPublikasi" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-in">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row justify-content-center">
-              <div class="col-md-4">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Publikasi+Kegiatan" class="card-img-top"
-                    alt="Publikasi Kegiatan">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Publikasi Kegiatan</h6>
-                    <p>Menangani penyebaran informasi kegiatan melalui media sosial dan website.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Press+Release" class="card-img-top"
-                    alt="Press Release">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Press Release</h6>
-                    <p>Menyusun berita resmi tentang kegiatan HMJK untuk disebarluaskan secara profesional.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <div class="card shadow-sm">
-                  <img src="https://via.placeholder.com/300x200?text=Media+Monitoring" class="card-img-top"
-                    alt="Media Monitoring">
-                  <div class="card-body">
-                    <h6 class="fw-bold">Media Monitoring</h6>
-                    <p>Melakukan pemantauan dan evaluasi efektivitas publikasi di berbagai platform.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- ========= DIVISI PUBLIKASI ========= -->
+      <h4 class="fw-bold mb-4 mt-5 text-warning" data-aos="fade-right">Divisi Publikasi</h4>
+      <div class="scroll-wrapper" data-aos="zoom-in">
+        <div class="scroll-track">
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Publikasi+Kegiatan"
+              alt="Publikasi Kegiatan">
+            <h6>Publikasi Kegiatan</h6>
+            <p>Menangani penyebaran informasi kegiatan melalui media sosial dan website.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Press+Release" alt="Press Release">
+            <h6>Press Release</h6>
+            <p>Menyusun berita resmi tentang kegiatan HMJK untuk disebarluaskan secara profesional.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Media+Monitoring" alt="Media Monitoring">
+            <h6>Media Monitoring</h6>
+            <p>Melakukan pemantauan dan evaluasi efektivitas publikasi di berbagai platform.</p>
+          </div>
+
+          <!-- duplikasi -->
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Publikasi+Kegiatan"
+              alt="Publikasi Kegiatan">
+            <h6>Publikasi Kegiatan</h6>
+            <p>Menangani penyebaran informasi kegiatan melalui media sosial dan website.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Press+Release" alt="Press Release">
+            <h6>Press Release</h6>
+            <p>Menyusun berita resmi tentang kegiatan HMJK untuk disebarluaskan secara profesional.</p>
+          </div>
+          <div class="card kartu"><img src="https://via.placeholder.com/300x200?text=Media+Monitoring" alt="Media Monitoring">
+            <h6>Media Monitoring</h6>
+            <p>Melakukan pemantauan dan evaluasi efektivitas publikasi di berbagai platform.</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPublikasi" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselPublikasi" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
-        </button>
       </div>
     </div>
   </section>
@@ -1068,6 +1062,38 @@
       });
     });
     /* Tombol Scroll ke Atas */
+    // scroll manual support (drag / swipe)
+  document.querySelectorAll('.scroll-wrapper').forEach(wrapper => {
+    let isDown = false;
+    let startX, scrollLeft;
+
+    wrapper.addEventListener('mousedown', e => {
+      isDown = true;
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+      wrapper.classList.add('active');
+    });
+    wrapper.addEventListener('mouseleave', () => isDown = false);
+    wrapper.addEventListener('mouseup', () => isDown = false);
+    wrapper.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 2;
+      wrapper.scrollLeft = scrollLeft - walk;
+    });
+
+    // support touch
+    wrapper.addEventListener('touchstart', e => {
+      startX = e.touches[0].pageX;
+      scrollLeft = wrapper.scrollLeft;
+    });
+    wrapper.addEventListener('touchmove', e => {
+      const x = e.touches[0].pageX;
+      const walk = (x - startX) * 2;
+      wrapper.scrollLeft = scrollLeft - walk;
+    });
+  });
   </script>
 </body>
 </html>
